@@ -7,7 +7,7 @@
 
 	// EXERCISE #1
 	//
-	// Given array of positive, unique integers.
+	// Given array of positive, unique integers. All integers are less than 50 (so maximum is 49).
 	// For any given k, find first k minimum values (in any order).
 	// e.g. ([1, 2, 3, 4], k = 2) -> (1, 2)
 
@@ -15,6 +15,25 @@
 	var k = 4;
 
 	// CODE HERE
+	var min = array[0];
+	var min_index = 0; // index in array of current minimum value
+
+	// loop through array k-times and find minimal values
+	for (var reps = 0; reps < k; reps++) {
+
+		// loop through array and find next minimum value
+		for (var i = 1; i < array.length; i++) {
+			if (array[i] < min) {
+				min = array[i]; // store newly found minimum value
+				min_index = i; // where in array is the current minimum value
+			}
+		}
+
+		console.log(min); // print out current minimum
+
+		array[min_index] = 50; // make sure I wont find this minimum again
+		min = 50; // reset minimum
+	}
 
 	</script>
 </head>
