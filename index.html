@@ -5,47 +5,6 @@
 	<title>Workshop</title>
 	<script>
 
-	// basic types
-	var num = 10;
-	console.log(typeof num);
-
-	var str = 'Hello World';
-	console.log(typeof str);
-
-	var arr = [];
-	console.log(typeof arr);
-
-	var obj = {
-		message: 'Hello World'
-	};
-	console.log(typeof obj);
-
-
-	// undefined
-	var x;
-	console.log(typeof x); // unknown value, unknown type
-
-
-	// checking for type the dirty way
-	var val = '12';
-	if (typeof val === 'number') {
-		// variable is indeed a number and it is safe to do some calculation with it
-	} else {
-		// variable is something else
-	}
-
-
-	// type conversions using global functions (more about functions later)
-	String(100); // converts number 100 to "100"
-	(100).toString(); // same as above
-
-	true.toString(); // "true"
-
-	Number('100') // converts to number 100
-	Number(' '); // 0
-	Number(''); // 0
-	Number('10 20') // NaN (not a number)
-
 	</script>
 </head>
 <body>
