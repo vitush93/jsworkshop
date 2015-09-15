@@ -5,51 +5,46 @@
 	<title>Workshop</title>
 	<script>
 
-	// simple object
-	var person = {
-		name: "John", 
-		age: 21
+	// basic types
+	var num = 10;
+	console.log(typeof num);
+
+	var str = 'Hello World';
+	console.log(typeof str);
+
+	var arr = [];
+	console.log(typeof arr);
+
+	var obj = {
+		message: 'Hello World'
 	};
-	console.log(person);
-
-	// dynamically add property
-	person.lastname = "Doe";
-	console.log(person);
-
-	// object comparison difficulties
-	var johnDoe = {
-		name: "John",
-		age: 21,
-		lastname: "Doe"
-	};
-	console.log(person == johnDoe);
+	console.log(typeof obj);
 
 
-	// objects can hold any kind of data - even another objects and arrays
-	var stuff = {
-
-		john: johnDoe,
-
-		number: 10,
-
-		str: 'something',
-
-		item: {
-			name: 'Useless Box',
-			price: 100
-		},
-
-		arr: [1, 2, 3, 4]
-	};
+	// undefined
+	var x;
+	console.log(typeof x); // unknown value, unknown type
 
 
-	// accessing object properties via dot-notation
-	console.log(stuff.number); // 10
-	console.log(stuff.john.name) // "John"
+	// checking for type the dirty way
+	var val = '12';
+	if (typeof val === 'number') {
+		// variable is indeed a number and it is safe to do some calculation with it
+	} else {
+		// variable is something else
+	}
 
-	// accessing object properties via indexer - treating objects as an associative array
-	console.log(stuff['str']); // "something"
-	console.log(stuff['item']['price']) // 100
+
+	// type conversions using global functions (more about functions later)
+	String(100); // converts number 100 to "100"
+	(100).toString(); // same as above
+
+	true.toString(); // "true"
+
+	Number('100') // converts to number 100
+	Number(' '); // 0
+	Number(''); // 0
+	Number('10 20') // NaN (not a number)
 
 	</script>
 </head>
