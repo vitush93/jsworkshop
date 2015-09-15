@@ -5,26 +5,53 @@
 	<title>Workshop</title>
 	<script>
 
-	// console output
-	console.log("Hello World");
+	// simple condition
+	var num = 11;
+	var isEven = (num % 2 == 0);
+	if (isEven) {
+		console.log('Number is even')
+	} else { // else if (...)
+		console.log('Number is odd');
+	}
 
-	// string variables - quotes vs apostrophes (prefer apostrophe!)
-	var stringVariable = "something";
-	var anotherStringVariable = 'lorem ipsum dolor';
-	var concatenated = stringVariable + " word " + anotherStringVariable;
 
-	// numbers
-	var number = 10;
-	var decimal = 3.14159;
+	// for loop
+	for (var i = 1; i <= 5; i++) {
+		console.log(i + ' Mississippi')
+	}
 
-	// arrays
-	var arr1 = [];
-	var arr2 = new Array();
-	var arr3 = [1, 5, -2, 0, 'text'];
 
-	// boolean variables
-	var b = true;
-	var odd = (number % 2 == 0);
+	// while loop
+	var j = 0;
+	while(j < 4) {
+		console.log('hello ' + j);
+
+		j++;
+	}
+
+
+	// do-while loop
+	j = 0;
+	do {
+		console.log('hello again ' + j);
+
+		j++;
+	} while (j < 4);
+
+
+	// switch-case
+	var c = 'a';
+	switch(c) {
+		case 'a': 
+			console.log('a');
+			break;
+		case 'b': 
+			console.log('b');
+			break;
+		default:
+			console.log('something else');
+			break;
+	}
 
 	</script>
 </head>
