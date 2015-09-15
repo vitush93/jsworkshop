@@ -5,35 +5,51 @@
 	<title>Workshop</title>
 	<script>
 
-	// EXERCISE #1
-	//
-	// Given array of positive, unique integers. All integers are less than 50 (so maximum is 49).
-	// For any given k, find first k minimum values (in any order).
-	// e.g. ([1, 2, 3, 4], k = 2) -> (1, 2)
+	// simple object
+	var person = {
+		name: "John", 
+		age: 21
+	};
+	console.log(person);
 
-	var array = [1, 4, 2, 10, 5, 16, 9, 7, 23];
-	var k = 4;
+	// dynamically add property
+	person.lastname = "Doe";
+	console.log(person);
 
-	// CODE HERE
-	var min = array[0];
-	var min_index = 0; // index in array of current minimum value
+	// object comparison difficulties
+	var johnDoe = {
+		name: "John",
+		age: 21,
+		lastname: "Doe"
+	};
+	console.log(person == johnDoe);
 
-	// loop through array k-times and find minimal values
-	for (var reps = 0; reps < k; reps++) {
 
-		// loop through array and find next minimum value
-		for (var i = 1; i < array.length; i++) {
-			if (array[i] < min) {
-				min = array[i]; // store newly found minimum value
-				min_index = i; // where in array is the current minimum value
-			}
-		}
+	// objects can hold any kind of data - even another objects and arrays
+	var stuff = {
 
-		console.log(min); // print out current minimum
+		john: johnDoe,
 
-		array[min_index] = 50; // make sure I wont find this minimum again
-		min = 50; // reset minimum
-	}
+		number: 10,
+
+		str: 'something',
+
+		item: {
+			name: 'Useless Box',
+			price: 100
+		},
+
+		arr: [1, 2, 3, 4]
+	};
+
+
+	// accessing object properties via dot-notation
+	console.log(stuff.number); // 10
+	console.log(stuff.john.name) // "John"
+
+	// accessing object properties via indexer - treating objects as an associative array
+	console.log(stuff['str']); // "something"
+	console.log(stuff['item']['price']) // 100
 
 	</script>
 </head>
